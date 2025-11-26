@@ -25,7 +25,6 @@ export interface CareerOpportunity {
   title: string;
   salary: string;
   description: string;
-  responsibilities: string[];
 }
 
 export interface Testimonial {
@@ -63,96 +62,36 @@ export const careerOpportunities: CareerOpportunity[] = [
     title: 'Information Security Analyst',
     salary: '$99,274',
     description: "Protect an organization's computer networks and systems",
-    responsibilities: [
-      'Monitor networks for data security vulnerabilities',
-      'Investigate and document security breaches',
-      'Research IT security trends',
-      'Develop security strategies',
-    ],
   },
   {
     icon: Search,
     title: 'Digital Forensic Examiner',
     salary: '$96,157',
     description: 'Retrieve information from computers and digital devices',
-    responsibilities: [
-      'Collect and analyze digital evidence',
-      'Recover data from damaged drives',
-      'Maintain chain of custody',
-      'Assist law enforcement investigations',
-    ],
   },
   {
     icon: Server,
     title: 'Security Systems Administrator',
     salary: '$114,967',
     description: 'Manage day-to-day operations of cybersecurity systems',
-    responsibilities: [
-      'Monitor systems and run backups',
-      'Manage user accounts',
-      'Document security procedures',
-      'Respond to security intrusions',
-    ],
   },
   {
     icon: WandSparkles,
     title: 'Penetration Tester',
     salary: '$124,127',
     description: 'Identify security weaknesses by simulating attacks',
-    responsibilities: [
-      'Plan and carry out penetration tests',
-      'Create security reports',
-      'Develop testing automation scripts',
-      'Conduct social engineering exercises',
-    ],
   },
   {
     icon: ShieldCheck,
     title: 'Security Engineer',
     salary: '$137,879',
     description: 'Design systems to protect against cyberattacks',
-    responsibilities: [
-      'Develop security standards',
-      'Test security solutions',
-      'Lead incident response teams',
-      'Automate vulnerability detection',
-    ],
   },
   {
     icon: Network,
     title: 'Security Architect',
     salary: '$164,433',
     description: 'Set the vision for company security systems',
-    responsibilities: [
-      'Build and maintain security networks',
-      'Prepare security budgets',
-      'Coordinate security operations',
-      'Conduct security drills',
-    ],
-  },
-  {
-    icon: Lock,
-    title: 'Cryptography Engineer',
-    salary: '$137,802',
-    description: 'Create encryption algorithms and security protocols',
-    responsibilities: [
-      'Develop cryptographic algorithms',
-      'Analyze vulnerabilities',
-      'Implement encryption solutions',
-      'Test encryption techniques',
-    ],
-  },
-  {
-    icon: User,
-    title: 'Cybersecurity Manager',
-    salary: '$153,084',
-    description: 'Oversee security infrastructure and policies',
-    responsibilities: [
-      'Manage resources and policies',
-      'Ensure compliance',
-      'Source cybersecurity tools',
-      'Lead risk mitigation',
-    ],
   },
 ];
 
@@ -160,7 +99,7 @@ export const testimonials: Testimonial[] = [
   {
     name: 'Mihika K.',
     rating: 4,
-    text: "What I loved the most about this website is everything was quick and easy to find. The course content and table of content in each course was SO helpful. Would like to see some more courses come out!",
+    text: 'What I loved the most about this website is everything was quick and easy to find. The course content and table of content in each course was SO helpful. Would like to see some more courses come out!',
   },
   {
     name: 'Eternal Knight',

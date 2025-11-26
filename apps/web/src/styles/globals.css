@@ -132,6 +132,7 @@
   /* Responsive base font size */
   html {
     @apply text-[87.5%] sm:text-[93.75%] md:text-[100%];
+    scroll-behavior: smooth;
   }
 
   body {
