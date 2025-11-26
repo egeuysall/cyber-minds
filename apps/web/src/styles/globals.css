@@ -1,0 +1,247 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: Inter, ui-sans-serif, sans-serif, system-ui;
+  --font-mono: JetBrains Mono, ui-monospace, monospace;
+  --font-serif: Lora, ui-serif, serif;
+  --radius: 0.5rem;
+  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
+  --tracking-tight: calc(var(--tracking-normal) - 0.025em);
+  --tracking-wide: calc(var(--tracking-normal) + 0.025em);
+  --tracking-wider: calc(var(--tracking-normal) + 0.05em);
+  --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+  --tracking-normal: var(--tracking-normal);
+  --shadow-2xl: var(--shadow-2xl);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-md: var(--shadow-md);
+  --shadow: var(--shadow);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-2xs: var(--shadow-2xs);
+  --spacing: var(--spacing);
+  --letter-spacing: var(--letter-spacing);
+  --shadow-offset-y: var(--shadow-offset-y);
+  --shadow-offset-x: var(--shadow-offset-x);
+  --shadow-spread: var(--shadow-spread);
+  --shadow-blur: var(--shadow-blur);
+  --shadow-opacity: var(--shadow-opacity);
+  --color-shadow-color: var(--shadow-color);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.1448 0 0);
+  --foreground: oklch(0.9851 0 0);
+  --card: oklch(0.2046 0 0);
+  --card-foreground: oklch(0.9851 0 0);
+  --popover: oklch(0.2686 0 0);
+  --popover-foreground: oklch(0.9851 0 0);
+  --primary: oklch(0.5526 0.1316 242.4168);
+  --primary-foreground: oklch(0.9851 0 0);
+  --secondary: oklch(0.2686 0 0);
+  --secondary-foreground: oklch(0.709 0 0);
+  --muted: oklch(0.2686 0 0);
+  --muted-foreground: oklch(0.709 0 0);
+  --accent: oklch(0.2686 0 0);
+  --accent-foreground: oklch(0.709 0 0);
+  --destructive: oklch(0.6368 0.2078 25.3313);
+  --border: oklch(0.3211 0 0);
+  --input: oklch(0.3211 0 0);
+  --ring: oklch(0.5526 0.1316 242.4168);
+  --chart-1: oklch(0.5526 0.1316 242.4168);
+  --chart-2: oklch(0.7227 0.192 149.5793);
+  --chart-3: oklch(0.6368 0.2078 25.3313);
+  --chart-4: oklch(0.7686 0.1647 70.0804);
+  --chart-5: oklch(0.5029 0.1197 242.4538);
+  --sidebar: oklch(0.2046 0 0);
+  --sidebar-foreground: oklch(0.9851 0 0);
+  --sidebar-primary: oklch(0.2686 0 0);
+  --sidebar-primary-foreground: oklch(0.9851 0 0);
+  --sidebar-accent: oklch(0.5526 0.1316 242.4168);
+  --sidebar-accent-foreground: oklch(0.9851 0 0);
+  --sidebar-border: oklch(0.3211 0 0);
+  --sidebar-ring: oklch(0.5526 0.1316 242.4168);
+  --destructive-foreground: oklch(0.9851 0 0);
+  --font-sans: Inter, ui-sans-serif, sans-serif, system-ui;
+  --font-serif: Lora, ui-serif, serif;
+  --font-mono: JetBrains Mono, ui-monospace, monospace;
+  --shadow-color: #0a0a0a;
+  --shadow-opacity: 0.1;
+  --shadow-blur: 8px;
+  --shadow-spread: 0px;
+  --shadow-offset-x: 0;
+  --shadow-offset-y: 2px;
+  --letter-spacing: 0em;
+  --spacing: 0.25rem;
+  --shadow-2xs: 0 2px 8px 0px hsl(0 0% 3.9216% / 0.05);
+  --shadow-xs: 0 2px 8px 0px hsl(0 0% 3.9216% / 0.05);
+  --shadow-sm: 0 2px 8px 0px hsl(0 0% 3.9216% / 0.1), 0 1px 2px -1px hsl(0 0% 3.9216% / 0.1);
+  --shadow: 0 2px 8px 0px hsl(0 0% 3.9216% / 0.1), 0 1px 2px -1px hsl(0 0% 3.9216% / 0.1);
+  --shadow-md: 0 2px 8px 0px hsl(0 0% 3.9216% / 0.1), 0 2px 4px -1px hsl(0 0% 3.9216% / 0.1);
+  --shadow-lg: 0 2px 8px 0px hsl(0 0% 3.9216% / 0.1), 0 4px 6px -1px hsl(0 0% 3.9216% / 0.1);
+  --shadow-xl: 0 2px 8px 0px hsl(0 0% 3.9216% / 0.1), 0 8px 10px -1px hsl(0 0% 3.9216% / 0.1);
+  --shadow-2xl: 0 2px 8px 0px hsl(0 0% 3.9216% / 0.25);
+  --tracking-normal: 0em;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  /* Responsive base font size */
+  html {
+    @apply text-[87.5%] sm:text-[93.75%] md:text-[100%];
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    letter-spacing: var(--tracking-normal);
+  }
+
+  /* Typography styles */
+  h1 {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight;
+  }
+
+  h2 {
+    @apply mt-10 scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
+  }
+
+  h3 {
+    @apply mt-8 scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+
+  h4 {
+    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+  }
+
+  p {
+    @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
+
+  blockquote {
+    @apply mt-6 border-l-2 pl-6 italic;
+  }
+
+  ul {
+    @apply my-6 ml-6 list-disc [&>li]:mt-2;
+  }
+
+  ol {
+    @apply my-6 ml-6 list-decimal [&>li]:mt-2;
+  }
+
+  code {
+    @apply bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+  }
+
+  table {
+    @apply w-full;
+  }
+
+  thead tr {
+    @apply even:bg-muted m-0 border-t p-0;
+  }
+
+  tbody tr {
+    @apply even:bg-muted m-0 border-t p-0;
+  }
+
+  th {
+    @apply border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right;
+  }
+
+  td {
+    @apply border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
+  }
+
+  a {
+    @apply text-primary font-medium underline underline-offset-4 transition-colors duration-200;
+  }
+
+  /* Prose/Blog content styles - Customizations on top of @tailwindcss/typography */
+  .prose {
+    @apply text-foreground max-w-none;
+  }
+
+  .prose :where(a):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    @apply text-primary no-underline transition-colors duration-200 hover:underline;
+  }
+
+  .prose :where(strong):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    @apply text-foreground;
+  }
+
+  .prose :where(code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    @apply bg-muted text-foreground;
+  }
+
+  .prose :where(pre):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    @apply bg-muted text-foreground;
+  }
+
+  .prose :where(pre code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    @apply bg-transparent;
+  }
+
+  .prose :where(blockquote):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    @apply border-l-primary text-muted-foreground;
+  }
+
+  .prose :where(h1, h2, h3, h4, h5, h6):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    @apply text-foreground;
+  }
+
+  .prose :where(thead):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    @apply border-border;
+  }
+
+  .prose :where(tbody tr):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    @apply border-border;
+  }
+
+  .prose :where(img):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+    @apply rounded-lg;
+  }
+}
