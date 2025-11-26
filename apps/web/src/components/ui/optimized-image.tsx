@@ -1,6 +1,6 @@
 import NextImage, { ImageProps as NextImageProps } from 'next/image';
 
-interface OptimizedImageProps extends Omit<NextImageProps, 'quality' | 'loading'> {
+interface OptimizedImageProps extends NextImageProps {
   quality?: number;
   loading?: 'lazy' | 'eager';
   priority?: boolean;

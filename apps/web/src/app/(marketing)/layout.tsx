@@ -1,5 +1,6 @@
 'use client';
 
+import { Header } from '@/components/header';
 import { siteConfig } from '@/lib/config';
 import { usePathname } from 'next/navigation';
 
@@ -68,9 +69,10 @@ export default function MarketingLayout({ children }: { children: React.ReactNod
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <Header />
       <div className="flex flex-1 items-center justify-center">{children}</div>
       {!isHomePage && (
-        <footer className="pb-6">
+        <footer className="border-border/40 border-t pb-6">
           <p className="text-muted-foreground text-center text-sm">
             &copy; {new Date().getFullYear()} CyberMinds. All rights reserved.
           </p>

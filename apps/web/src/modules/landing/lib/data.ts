@@ -9,8 +9,6 @@ import {
   WandSparkles,
   ShieldCheck,
   Network,
-  Lock,
-  User,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -33,28 +31,30 @@ export interface Testimonial {
   text: string;
 }
 
-export const howItWorksSteps: HowItWorksStep[] = [
-  {
-    icon: Shield,
-    title: '10 Courses',
-    description: 'Accelerate through the 10 courses. Learn at your own pace.',
-  },
-  {
-    icon: BookOpen,
-    title: 'Engaging Content',
-    description: 'Learn our content through short segments of engaging reading.',
-  },
-  {
-    icon: Gamepad2,
-    title: 'Interactive Games',
-    description: 'Engage in an interactive game and quiz to enhance your skills.',
-  },
-  {
-    icon: Code,
-    title: 'Code Practice',
-    description: 'Write code in our terminals and have it verified by our chatbox.',
-  },
-];
+export function getHowItWorksSteps(courseCount: number): HowItWorksStep[] {
+  return [
+    {
+      icon: Shield,
+      title: `${courseCount} Courses`,
+      description: `Accelerate through the ${courseCount} courses. Learn at your own pace.`,
+    },
+    {
+      icon: BookOpen,
+      title: 'Engaging Content',
+      description: 'Learn our content through short segments of engaging reading.',
+    },
+    {
+      icon: Gamepad2,
+      title: 'Interactive Games',
+      description: 'Engage in an interactive game and quiz to enhance your skills.',
+    },
+    {
+      icon: Code,
+      title: 'Code Practice',
+      description: 'Write code in our terminals and have it verified by our chatbox.',
+    },
+  ];
+}
 
 export const careerOpportunities: CareerOpportunity[] = [
   {

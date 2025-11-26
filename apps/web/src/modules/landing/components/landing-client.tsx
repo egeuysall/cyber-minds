@@ -8,19 +8,24 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { motion } from 'motion/react';
 import { fadeInUpBlur, withDelay } from '@/lib/animations';
 import { siteConfig } from '@/lib/config';
-import { howItWorksSteps, careerOpportunities, testimonials } from '@/modules/landing/lib/data';
+import { getHowItWorksSteps, careerOpportunities, testimonials } from '@/modules/landing/lib/data';
 import { MessageSquare, Trophy } from 'lucide-react';
 
-export function LandingClient() {
+interface LandingClientProps {
+  courseCount: number;
+}
+
+export function LandingClient({ courseCount }: LandingClientProps) {
+  const howItWorksSteps = getHowItWorksSteps(courseCount);
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-hidden">
       {/* Animated light rays background */}
       <LightRays
         count={8}
-        color="oklch(0.2686 0 0 / 0.6)"
+        color="oklch(0.2686 0 0 / 0.4)"
         blur={32}
-        speed={4}
-        length="80vh"
+        speed={6}
+        length="90vh"
         className="pointer-events-none fixed inset-0 z-0"
       />
 
@@ -38,7 +43,7 @@ export function LandingClient() {
             />
           </motion.div>
           <motion.div className="mb-12 space-y-4 text-center" {...withDelay(fadeInUpBlur, 0.15)}>
-            <h1>CyberMinds</h1>
+            <h1>Master Cybersecurity Skills</h1>
             <p className="text-muted-foreground">Protecting the digital future.</p>
             <div className="flex justify-center gap-4 pt-4">
               <Link href="/courses">
@@ -89,8 +94,8 @@ export function LandingClient() {
                 <CardContent>
                   <p className="text-muted-foreground mb-4 text-sm">
                     Have conversations and learn from the CyberMinds chatbox. Explore the
-                    chatbot&apos;s capabilities by asking questions about attacks, defenses, or other
-                    topics in cybersecurity.
+                    chatbot&apos;s capabilities by asking questions about attacks, defenses, or
+                    other topics in cybersecurity.
                   </p>
                   <Link href="/chat" className="text-primary hover:text-primary/80">
                     View Chatbox
@@ -107,8 +112,8 @@ export function LandingClient() {
                 <CardContent>
                   <p className="text-muted-foreground mb-4 text-sm">
                     Immerse yourself in this opportunity provided by the CyberMinds website. Our CTF
-                    challenges will allow you to practice what you&apos;ve learned, capture flags, and
-                    enjoy a fun-filled experience.
+                    challenges will allow you to practice what you&apos;ve learned, capture flags,
+                    and enjoy a fun-filled experience.
                   </p>
                   <Link href="/ctf" className="text-primary hover:text-primary/80">
                     Start Courses
