@@ -5,7 +5,7 @@ on:
     types: [opened, edited, synchronize, reopened]
 
 env:
-  NODE_VERSION: "25.1.0"
+  NODE_VERSION: '25.1.0'
 
 jobs:
   commitlint:
