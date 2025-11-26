@@ -3,28 +3,28 @@ name: Web CI/CD
 on:
   push:
     branches:
-      - main
+      - master
       - develop
-      - "release/**"
-      - "hotfix/**"
+      - 'release/**'
+      - 'hotfix/**'
     paths:
-      - "apps/web/**"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - ".github/workflows/web.yml"
+      - 'apps/web/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - '.github/workflows/web.yml'
   pull_request:
     branches:
-      - main
+      - master
       - develop
     paths:
-      - "apps/web/**"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - ".github/workflows/web.yml"
+      - 'apps/web/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - '.github/workflows/web.yml'
 
 env:
-  NODE_VERSION: "25.1.0"
-  PNPM_VERSION: "10.20.0"
+  NODE_VERSION: '25.1.0'
+  PNPM_VERSION: '10.20.0'
 
 jobs:
   lint:
@@ -44,8 +44,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: "pnpm"
-          cache-dependency-path: "apps/web/pnpm-lock.yaml"
+          cache: 'pnpm'
+          cache-dependency-path: 'apps/web/pnpm-lock.yaml'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -76,8 +76,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: "pnpm"
-          cache-dependency-path: "apps/web/pnpm-lock.yaml"
+          cache: 'pnpm'
+          cache-dependency-path: 'apps/web/pnpm-lock.yaml'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -104,8 +104,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: "pnpm"
-          cache-dependency-path: "apps/web/pnpm-lock.yaml"
+          cache: 'pnpm'
+          cache-dependency-path: 'apps/web/pnpm-lock.yaml'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
